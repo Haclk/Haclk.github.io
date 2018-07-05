@@ -1,10 +1,1392 @@
-<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Hexo</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Hexo</h1><a id="logo" href="/.">Hexo</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Start</i></a><a href="/archives/"><i class="fa fa-archive"> Archiv</i></a><a href="/about/"><i class="fa fa-user"> Über</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title"><a href="/2018/06/02/在Hexo中设置RSS/">在Hexo中设置RSS</a></h1><div class="post-meta">2018-06-02</div><div class="post-content"><p>首选进入博客根目录，先安装这个包:</p>
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
+  <title>Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/02/在Hexo中设置RSS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/02/在Hexo中设置RSS/" itemprop="url">在Hexo中设置RSS</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-02T16:03:39+08:00">
+                2018-06-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/写作谈/" itemprop="url" rel="index">
+                    <span itemprop="name">写作谈</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>首选进入博客根目录，先安装这个包:</p>
 <p><code>npm install hexo-generator-feed</code></p>
 <p>然后在在根<code>_config.yml</code>文件中配置该插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">feed:</span><br><span class="line">    type: atom</span><br><span class="line">    path: atom.xml</span><br><span class="line">    limit: 20</span><br><span class="line">    hub:</span><br><span class="line">    content:</span><br><span class="line">    content_limit:</span><br><span class="line">    content_limit_delim: &apos; &apos;</span><br></pre></td></tr></table></figure></div><p class="readmore"><a href="/2018/06/02/在Hexo中设置RSS/">Mehr lesen</a></p></div><div class="post"><h1 class="post-title"><a href="/2018/06/02/文章图片管理/">在hexo博客中添加分类categories和标签tags</a></h1><div class="post-meta">2018-06-02</div><div class="post-content"><h2 id="如何传图片"><a href="#如何传图片" class="headerlink" title="如何传图片"></a>如何传图片</h2><p>因为是急于markdown的，所以对于图片可能就需要一些特殊处理。</p>
-<h3 id="本地存储"><a href="#本地存储" class="headerlink" title="本地存储"></a>本地存储</h3><h4 id="绝对路径"><a href="#绝对路径" class="headerlink" title="绝对路径"></a>绝对路径</h4><p>当Hexo项目中只用到少量图片时，可以将图片统一放在<code>source/images</code>文件夹中，通过markdown语法访问它们。</p></div><p class="readmore"><a href="/2018/06/02/文章图片管理/">Mehr lesen</a></p></div><div class="post"><h1 class="post-title"><a href="/2018/06/02/在Hexo博客中添加分类categories和标签tags/">在Hexo博客中添加分类categories和标签tags</a></h1><div class="post-meta">2018-06-02</div><div class="post-content"><h2 id="1-创建“分类”选项"><a href="#1-创建“分类”选项" class="headerlink" title="1 创建“分类”选项"></a>1 创建“分类”选项</h2><h3 id="1-1-生成“分类”页并添加tpye属性"><a href="#1-1-生成“分类”页并添加tpye属性" class="headerlink" title="1.1 生成“分类”页并添加tpye属性"></a>1.1 生成“分类”页并添加tpye属性</h3><p>打开命令行，进入博客所在文件夹。执行命令</p></div><p class="readmore"><a href="/2018/06/02/在Hexo博客中添加分类categories和标签tags/">Mehr lesen</a></p></div><div class="post"><h1 class="post-title"><a href="/2018/06/02/Hello Blog/">在Mac上写博客(Hexo+Github)</a></h1><div class="post-meta">2018-06-02</div><div class="post-content"><p>对于我来说，Blog本身并不陌生，但是自己写，就是新的世界了。为了简单，我就选择了网上现成的教程，但我根据的文章在操作上还是有些问题，所以重新进行整理说明。</p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="安装Homebrew"><a href="#安装Homebrew" class="headerlink" title="安装Homebrew"></a>安装Homebrew</h3><p>homebrew是我使用很多的包安装程序，可以很方便的在Mac上安装软件。在终端中输入以下命令即可安装：</p></div><p class="readmore"><a href="/2018/06/02/Hello Blog/">Mehr lesen</a></p></div><div class="post"><h1 class="post-title"><a href="/2018/06/02/HomeBrew的安装与常用命令/">HomeBrew	的安装与常用命令</a></h1><div class="post-meta">2018-06-02</div><div class="post-content"><p>详细可以参照<a href="https://brew.sh/index_zh-cn.html" target="_blank" rel="noopener">官网地址</a>，以下介绍我常用到的一些命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">feed:</span><br><span class="line">    type: atom</span><br><span class="line">    path: atom.xml</span><br><span class="line">    limit: 20</span><br><span class="line">    hub:</span><br><span class="line">    content:</span><br><span class="line">    content_limit:</span><br><span class="line">    content_limit_delim: &apos; &apos;</span><br></pre></td></tr></table></figure>
+<p>参数的含义：</p>
+<ul>
+<li><code>type</code>: <code>RSS</code>的类型(<code>atom/rss2</code>)</li>
+<li><code>path</code>: 文件路径,默认是<code>atom.xml/rss2.xml</code></li>
+<li><code>limit</code>: 展示文章的数量,使用<strong>0</strong>或则<strong>false</strong>代表展示全部</li>
+<li><code>hub</code>:</li>
+<li><code>content</code>: 在<code>RSS</code>文件中是否包含内容 ,有3个值 <code>true/false</code>默认不填为<code>false</code></li>
+<li><code>content_limit</code>: 指定内容的长度作为摘要,仅仅在上面<code>content</code>设置为<code>false</code>和<code>没有自定义的描述出现</code></li>
+<li><code>content_limit_delim</code>: 上面截取描述的分隔符,截取内容是以指定的这个分隔符作为截取结束的标志.在达到规定的内容长度之前最后出现的这个分隔符之前的内容,，防止从中间截断.</li>
+</ul>
+<p>参考文章：</p>
+<p><a href="https://segmentfault.com/a/1190000012647294" target="_blank" rel="noopener">为hexo博客添加RSS订阅功能</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/02/文章图片管理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/02/文章图片管理/" itemprop="url">在hexo博客中添加分类categories和标签tags</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-02T12:26:50+08:00">
+                2018-06-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/写作谈/" itemprop="url" rel="index">
+                    <span itemprop="name">写作谈</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="如何传图片"><a href="#如何传图片" class="headerlink" title="如何传图片"></a>如何传图片</h2><p>因为是急于markdown的，所以对于图片可能就需要一些特殊处理。</p>
+<h3 id="本地存储"><a href="#本地存储" class="headerlink" title="本地存储"></a>本地存储</h3><h4 id="绝对路径"><a href="#绝对路径" class="headerlink" title="绝对路径"></a>绝对路径</h4><p>当Hexo项目中只用到少量图片时，可以将图片统一放在<code>source/images</code>文件夹中，通过markdown语法访问它们。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source/images/image.jpg</span><br><span class="line">![](/images/image.jpg)</span><br></pre></td></tr></table></figure>
+<p>图片既可以在首页内容中访问到，也可以在文章正文中访问到。</p>
+<h4 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h4><p>图片除了可以放在统一的<code>images</code>文件夹中，还可以放在<strong>文章自己的目录</strong>中。文章的目录可以通过配置<code>_config.yml</code>来生成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
+<p>将<code>_config.yml</code>文件中的配置项<code>post_asset_folder</code>设为<code>true</code>后，执行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post_name</span><br></pre></td></tr></table></figure>
+<p>在<code>source/_posts</code>中会生成文章<code>post_name.md</code>和同名文件夹<code>post_name</code>。将图片资源放在<code>post_name</code>中，文章就可以使用相对路径引用图片资源了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_posts/post_name/image.jpg</span><br><span class="line">![](image.jpg)</span><br></pre></td></tr></table></figure>
+<p>上述是markdown的引用方式，图片只能在文章中显示，但无法在首页中正常显示。</p>
+<p>如果希望图片在文章和首页中同时显示，可以使用标签插件语法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_posts/post_name/image.jpg</span><br><span class="line">&#123;% asset_img image.jpg This is an image %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="图床应用"><a href="#图床应用" class="headerlink" title="图床应用"></a>图床应用</h3><p>当我们写作的时候，经常需要引用图片到文章里去，如果图片少的话我们可以直接把图片放入每篇文章的目录里面，然后发布到GitHub里去，但是这样会导致GitHub仓库变得越来越大，并且同步会非常慢。所以我们需要一个稳定强大长久的私人图床。一般小型网站的图床都不做考虑。</p>
+<h4 id="新浪微博图床"><a href="#新浪微博图床" class="headerlink" title="新浪微博图床"></a>新浪微博图床</h4><p>微博图床的优点就是自动给你产生不同尺寸的图片，还贴心的给你Markdown的语法，但是一个问题可能出在新浪微博屏蔽这种外链了，长期会有一些隐患的。</p>
+<h4 id="七牛云存储"><a href="#七牛云存储" class="headerlink" title="七牛云存储"></a>七牛云存储</h4><p>付费的存储空间里面七牛云存储稳定而且不错，免费认证的用户就有10GB存储空间，每月10G下载流量，足够博客用了。当你注册后建立一个新空间后，下载一个qrsync同步工具，可以很方便的把你本地的文件推送到七牛云存储空间里面，具体安装文档你可以看官方的说明文档，我这里贴出来这个工具的配置文档(conf.json)供你参考：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;src&quot;:&quot;your src dir&quot;,</span><br><span class="line">    &quot;dest&quot;:&quot;qiniu:access_key=123&amp;secret_key=456&amp;bucket=789&quot;,</span><br><span class="line">    &quot;debug_level&quot;:  1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这里把src替换成泥实际目录的绝对路径。dest里面替换access_key、secret_key及bucket。<br>这样每当你在src目录里添加图片后，执行如下命令即可把src目录的文件推送到bucket里面。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qrsync conf.json</span><br></pre></td></tr></table></figure>
+<p>需要注意的是src目录里面不需要建立子目录，因为这个同步工具会忽略子目录，直接把文件全部放到src根目录即可。<br>那怎么访问bucket里面的图片呢？每个存储空间都有一个域名，那任何一张图片访问的形式就是：<a href="https://link.zhihu.com/?target=http%3A//xn--7gq57dr3d05e78e4z5b/xxx.jpg" target="_blank" rel="noopener">http://七牛存储域名/xxx.jpg</a> 。那么所有图片都可以这么调用外链。考虑到存储空间有流量的限制，为了防止别人调用你的图片，你可以在存储空间管理里面设置白名单，把你的域名添加进去即可，这样只有你的域名可以访问这个图片等外链了。</p>
+<h4 id="Onedrive存储"><a href="#Onedrive存储" class="headerlink" title="Onedrive存储"></a>Onedrive存储</h4><p>Onedrive学生账户有1TB免费容量，如果只是存储文字怕是一辈子也用不完，来点图片吧还是。</p>
+<p>设置把本地这个图片文件夹同步到OneDrive。（也可以把所有的文件都放到OneDrive里面同步上去，多一个备份）</p>
+<h4 id="我的选择"><a href="#我的选择" class="headerlink" title="我的选择"></a>我的选择</h4><p>目前我选择最省钱的解决方案，但是略微麻烦一点，就是需要在Onedrive</p>
+<p>我目前选择的方案是用iPic软件上传，默认为微博图床，我猜够用的吧。可能后续会解锁高级用户，使用七牛之类的吧。</p>
+<p>直接下载iPic，拖拽图片到里面，可以自动生成Markdown的形式，插入到文章里就好。</p>
+<p><a href="https://yanyinhong.github.io/2017/05/02/How-to-insert-image-in-hexo-post/" target="_blank" rel="noopener">Hexo博客搭建之在文章中插入图片</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/02/在Hexo博客中添加分类categories和标签tags/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/02/在Hexo博客中添加分类categories和标签tags/" itemprop="url">在Hexo博客中添加分类categories和标签tags</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-02T11:23:58+08:00">
+                2018-06-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/写作谈/" itemprop="url" rel="index">
+                    <span itemprop="name">写作谈</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1-创建“分类”选项"><a href="#1-创建“分类”选项" class="headerlink" title="1 创建“分类”选项"></a>1 创建“分类”选项</h2><h3 id="1-1-生成“分类”页并添加tpye属性"><a href="#1-1-生成“分类”页并添加tpye属性" class="headerlink" title="1.1 生成“分类”页并添加tpye属性"></a>1.1 生成“分类”页并添加tpye属性</h3><p>打开命令行，进入博客所在文件夹。执行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure>
+<p>成功后会提示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Created: ~/Documents/blog/source/categories/index.md</span><br></pre></td></tr></table></figure>
+<p>根据上面的路径，找到<code>index.md</code>这个文件，打开后默认内容是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章分类</span><br><span class="line">date: 2017-05-27 13:47:40</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>添加<code>type: &quot;categories&quot;</code>到内容中，添加后是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章分类</span><br><span class="line">date: 2017-05-27 13:47:40</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>保存并关闭文件。</p>
+<h3 id="1-2-给文章添加“categories”属性"><a href="#1-2-给文章添加“categories”属性" class="headerlink" title="1.2 给文章添加“categories”属性"></a>1.2 给文章添加“categories”属性</h3><p>打开需要添加分类的文章，为其添加categories属性。下方的<code>categories: web前端</code>表示添加这篇文章到“web前端”这个分类。注意：hexo一篇文章只能属于一个分类，也就是说如果在“- web前端”下方添加“-xxx”，hexo不会产生两个分类，而是把分类嵌套（即该文章属于 “- web前端”下的 “-xxx ”分类）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: jQuery对表单的操作及更多应用</span><br><span class="line">date: 2017-05-26 12:12:57</span><br><span class="line">categories: </span><br><span class="line">- web前端</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>至此，成功给文章添加分类，点击首页的“分类”可以看到该分类下的所有文章。当然，只有添加了<code>categories: xxx</code>的文章才会被收录到首页的“分类”中。</p>
+<h2 id="2-创建“标签”选项"><a href="#2-创建“标签”选项" class="headerlink" title="2 创建“标签”选项"></a>2 创建“标签”选项</h2><h3 id="2-1-生成“标签”页并添加tpye属性"><a href="#2-1-生成“标签”页并添加tpye属性" class="headerlink" title="2.1 生成“标签”页并添加tpye属性"></a>2.1 生成“标签”页并添加tpye属性</h3><p>打开命令行，进入博客所在文件夹。执行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>成功后会提示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Created: ~/Documents/blog/source/tags/index.md</span><br></pre></td></tr></table></figure>
+<p>根据上面的路径，找到<code>index.md</code>这个文件，打开后默认内容是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2017-05-27 14:22:08</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>添加<code>type: &quot;tags&quot;</code>到内容中，添加后是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章分类</span><br><span class="line">date: 2017-05-27 13:47:40</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>保存并关闭文件。</p>
+<h3 id="2-2-给文章添加“tags”属性"><a href="#2-2-给文章添加“tags”属性" class="headerlink" title="2.2 给文章添加“tags”属性"></a>2.2 给文章添加“tags”属性</h3><p>打开需要添加标签的文章，为其添加tags属性。下方的<code>tags:</code>下方的<code>- jQuery</code> <code>- 表格</code><br><code>- 表单验证</code>就是这篇文章的标签了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: jQuery对表单的操作及更多应用</span><br><span class="line">date: 2017-05-26 12:12:57</span><br><span class="line">categories: </span><br><span class="line">- 写作谈</span><br><span class="line">tags: </span><br><span class="line">- Blog</span><br><span class="line">- Hexo</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>至此，成功给文章添加分类，点击首页的“标签”可以看到该标签下的所有文章。当然，只有添加了<code>tags: xxx</code>的文章才会被收录到首页的“标签”中。</p>
+<h2 id="3-设置默认初始内容"><a href="#3-设置默认初始内容" class="headerlink" title="3 设置默认初始内容"></a>3 设置默认初始内容</h2><p>打开scaffolds/post.md文件，在<code>tages:</code>上面加入<code>categories:</code>,保存后，之后执行<code>hexo new 文章名</code>命令生成的文件，页面里就有<code>categories:</code>项了。</p>
+<p><code>scaffolds</code>目录下，是新建页面的模板，执行新建命令时，是根据这里的模板页来完成的，所以可以在这里根据你自己的需求添加一些默认值。</p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a href="https://linlif.github.io/2017/05/27/Hexo使用攻略-添加分类及标签/" target="_blank" rel="noopener">Hexo使用攻略-添加分类及标签</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/02/Hello Blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/02/Hello Blog/" itemprop="url">在Mac上写博客(Hexo+Github)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-02T08:23:58+08:00">
+                2018-06-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/写作谈/" itemprop="url" rel="index">
+                    <span itemprop="name">写作谈</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>对于我来说，Blog本身并不陌生，但是自己写，就是新的世界了。为了简单，我就选择了网上现成的教程，但我根据的文章在操作上还是有些问题，所以重新进行整理说明。</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="安装Homebrew"><a href="#安装Homebrew" class="headerlink" title="安装Homebrew"></a>安装Homebrew</h3><p>homebrew是我使用很多的包安装程序，可以很方便的在Mac上安装软件。在终端中输入以下命令即可安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure>
+<p>查看安装是否成功:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew --version</span><br></pre></td></tr></table></figure>
+<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>使用homebrew安装Git，终端中输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
+<p>确定安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+<h2 id="通过nvm安装指定版本的node"><a href="#通过nvm安装指定版本的node" class="headerlink" title="通过nvm安装指定版本的node"></a>通过nvm安装指定版本的node</h2><p>Hexo使用的是node.js，所以离不开node，通过nvm安装。</p>
+<h3 id="安装及配置nvm"><a href="#安装及配置nvm" class="headerlink" title="安装及配置nvm"></a>安装及配置nvm</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install nvm</span><br></pre></td></tr></table></figure>
+<p>配置nvm在shell中可以使用nvm命令，修改<code>~/.bash_profile</code>文件，如果不存在，新建<code>.bash_profile</code>文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line">vim .bash_profile</span><br></pre></td></tr></table></figure>
+<p>在文件中添加如下命令:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR=~/.nvm</span><br><span class="line">source $(brew --prefix nvm)/nvm.sh</span><br></pre></td></tr></table></figure>
+<p>重新source</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source .bash_profile</span><br></pre></td></tr></table></figure>
+<h3 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nvm ls-remote //查看 所有的node可用版本</span><br><span class="line">nvm install xxx //下载你想要的版本</span><br><span class="line">nvm use xxx //使用指定版本的node</span><br><span class="line">nvm <span class="built_in">alias</span> default xxx //每次启动终端都使用该版本的node</span><br></pre></td></tr></table></figure>
+<p>查看是否安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<h2 id="安装并初始化hexo"><a href="#安装并初始化hexo" class="headerlink" title="安装并初始化hexo"></a>安装并初始化hexo</h2><h3 id="利用npm命令即可安装"><a href="#利用npm命令即可安装" class="headerlink" title="利用npm命令即可安装"></a>利用npm命令即可安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
+<h3 id="创建Blog所在的文件夹"><a href="#创建Blog所在的文件夹" class="headerlink" title="创建Blog所在的文件夹"></a>创建Blog所在的文件夹</h3><p>表示用户名，新建一个用来存放博客坏境的目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /Users/**/Workspace/github</span><br><span class="line">mdkir haclk</span><br></pre></td></tr></table></figure>
+<h3 id="hexo初始化"><a href="#hexo初始化" class="headerlink" title="hexo初始化"></a>hexo初始化</h3><p>进入刚刚创建的目录，并初始化hexo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd haclk</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<h3 id="设置主题"><a href="#设置主题" class="headerlink" title="设置主题"></a>设置主题</h3><p>可以<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo主题</a>页面中选择与自己相匹配的主题，使用Git clone到themes目录下，配置成自己博客的主题, 这些主题都是安装作者的喜好来开发的，我们可以Fork这个project，根据自己的喜好来进行二次开发和设置。</p>
+<p>比如我选择的就是<code>Maupassant</code>，如你所见，就是我现在博客的主题。找到它所在的Github的项目地址，在刚刚博客的目录下输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/tufu9441/maupassant-hexo.git themes/maupassant</span><br></pre></td></tr></table></figure>
+<p>主题文件便下载到了themes/manupassant的目录下了。</p>
+<p>然后下载所需要的插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-pug --save</span><br><span class="line">npm install hexo-renderer-sass --save</span><br></pre></td></tr></table></figure>
+<h3 id="在-config-yml进行基础配置"><a href="#在-config-yml进行基础配置" class="headerlink" title="在_config.yml进行基础配置"></a>在_config.yml进行基础配置</h3><p>一共有两个地方会有这个文件，一个是在根目录上，一个是在theme里面不同主题目录里。此处更改根目录下的配置文件。</p>
+<p>找到<code>theme:</code>关键词，并将其默认的Landscape改为<code>maupassant</code>。</p>
+<p>然后修改其他基本信息。</p>
+<h3 id="添加博客文章"><a href="#添加博客文章" class="headerlink" title="添加博客文章"></a>添加博客文章</h3><p>源文件一般为markdown文件，所以在写博客之前我们需要先了解<a href="http://www.appinn.com/markdown/" target="_blank" rel="noopener">markdown的基本语法</a>, 将完成的文章放到<code>source/_posts</code>路径下。</p>
+<h3 id="启动本地服务，浏览本地博客"><a href="#启动本地服务，浏览本地博客" class="headerlink" title="启动本地服务，浏览本地博客"></a>启动本地服务，浏览本地博客</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>如果出现<code>ERROR Deployer not found: git</code> 则需要重新安装hexo-deployer-git，输入命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<h3 id="本地访问"><a href="#本地访问" class="headerlink" title="本地访问"></a>本地访问</h3><p>浏览器输入<code>http://localhost:4000</code>进行访问，此时博客只是部署在本地的位置。</p>
+<h2 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h2><h3 id="申请Github账号"><a href="#申请Github账号" class="headerlink" title="申请Github账号"></a>申请Github账号</h3><p>这个大家都会的吧，不赘述了</p>
+<h3 id="创建新的Repository"><a href="#创建新的Repository" class="headerlink" title="创建新的Repository"></a>创建新的Repository</h3><p>输入<code>Repository name</code>时，最好与前面的<code>username</code>保持一致(上图不一致是因为我已经使用<code>haclk.github.io</code>创建了一个github仓库了)</p>
+<h3 id="选择Github主题"><a href="#选择Github主题" class="headerlink" title="选择Github主题"></a>选择Github主题</h3><p>选择<code>haclk/haclk.github.io &gt;&gt; Settings &gt;&gt; GitHub Pages &gt;&gt; Choose a theme</code></p>
+<p>随便选择一个主题，最终会使用hexo中选择的主题样式，这里就无所谓了</p>
+<h3 id="绑定hexo"><a href="#绑定hexo" class="headerlink" title="绑定hexo"></a>绑定hexo</h3><p>进入第三步创建的<code>haclk.github.io</code>文件夹，在<code>_config.yml</code>配置对于的github仓库, 以及本次提交的信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd haclk</span><br><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure>
+<p>配置信息和提交信息如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  message: &quot;博客更新&quot;</span><br><span class="line">  branch: master</span><br><span class="line">  repo: https://github.com/Haclk/Haclk.github.io.git</span><br></pre></td></tr></table></figure>
+<h3 id="提交到Github"><a href="#提交到Github" class="headerlink" title="提交到Github"></a>提交到Github</h3><p>生成静态文件，再部署：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+<p>输入Github的账号，密码，就完成了。</p>
+<h3 id="访问网站"><a href="#访问网站" class="headerlink" title="访问网站"></a>访问网站</h3><p>直接在浏览器里输入<code>https://haclk.github.io/</code>即可查看我的网站啦</p>
+<h2 id="开始写作"><a href="#开始写作" class="headerlink" title="开始写作"></a>开始写作</h2><h3 id="直接写作"><a href="#直接写作" class="headerlink" title="直接写作"></a>直接写作</h3><p>在Mac打开iTerm终端</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd haclk</span><br></pre></td></tr></table></figure>
+<p>新建文章</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new (文章名)</span><br></pre></td></tr></table></figure>
+<p>会自动生成文章标题，创建时间，以及标签</p>
+<p>发布文章到GitHub Pages</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+<p>修改文章后继续执行第3步即可重新发布上去</p>
+<h3 id="先写草稿"><a href="#先写草稿" class="headerlink" title="先写草稿"></a>先写草稿</h3><p>我一般会先把文章搬运到草稿文件夹<code>_drafts</code>，完成了之后再搬运回去，以防止中途有其他文章想发，而把未完成的文章也一起发布出来了。</p>
+<p>在每次发布文章之前，我会现在本地预览一下发布的效果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<h2 id="主要参考文章"><a href="#主要参考文章" class="headerlink" title="主要参考文章"></a>主要参考文章</h2><p><a href="https://hankliu62.github.io/2017/09/09/hexo-github-blog-guide/" target="_blank" rel="noopener">MAC搭建个人博客hexo+github详细完整步骤</a></p>
+<p><a href="https://darrenliuwei.com/hexo-d后-ERROR-Deployer-not-found-git.html" target="_blank" rel="noopener">hexo d后 ERROR Deployer not found: git</a></p>
+<p><a href="https://github.com/tufu9441/maupassant-hexo" target="_blank" rel="noopener">Github: ufu9441/maupassant-hexo</a></p>
+<p><a href="https://www.haomwei.com/technology/maupassant-hexo.html" target="_blank" rel="noopener">大道至简——Hexo简洁主题推荐</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/02/HomeBrew的安装与常用命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/02/HomeBrew的安装与常用命令/" itemprop="url">HomeBrew	的安装与常用命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-02T08:23:58+08:00">
+                2018-06-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MacOS入门与进阶/" itemprop="url" rel="index">
+                    <span itemprop="name">MacOS入门与进阶</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>详细可以参照<a href="https://brew.sh/index_zh-cn.html" target="_blank" rel="noopener">官网地址</a>，以下介绍我常用到的一些命令：</p>
 <ul>
 <li>安装</li>
 </ul>
-<p>直接在终端里输入即可：</p></div><p class="readmore"><a href="/2018/06/02/HomeBrew的安装与常用命令/">Mehr lesen</a></p></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Kategorien</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/MacOS入门与进阶/">MacOS入门与进阶</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/写作谈/">写作谈</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/Blog/" style="font-size: 15px;">Blog</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Github/" style="font-size: 15px;">Github</a> <a href="/tags/MacOS/" style="font-size: 15px;">MacOS</a> <a href="/tags/Homebrew/" style="font-size: 15px;">Homebrew</a> <a href="/tags/RSS/" style="font-size: 15px;">RSS</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Letzte</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/06/02/在Hexo中设置RSS/">在Hexo中设置RSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/02/文章图片管理/">在hexo博客中添加分类categories和标签tags</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/02/在Hexo博客中添加分类categories和标签tags/">在Hexo博客中添加分类categories和标签tags</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/02/Hello Blog/">在Mac上写博客(Hexo+Github)</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/02/HomeBrew的安装与常用命令/">HomeBrew	的安装与常用命令</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Blogroll</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">Hexo.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+<p>直接在终端里输入即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>常用命令</li>
+</ul>
+<p>下文中，用<code>***</code>表示软件包的名称：</p>
+<ul>
+<li>搜索</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew search ***</span><br></pre></td></tr></table></figure>
+<ul>
+<li>查询</li>
+</ul>
+<p>显示软件包的详细信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew info ***</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install ***</span><br></pre></td></tr></table></figure>
+<ul>
+<li>查看已安装软件列表</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew list</span><br></pre></td></tr></table></figure>
+<ul>
+<li>卸载</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew uninstall ***</span><br></pre></td></tr></table></figure>
+<ul>
+<li>全部更新</li>
+</ul>
+<p>更新Homebrew 在服务器端上的包目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br></pre></td></tr></table></figure>
+<ul>
+<li>更新指定软件</li>
+</ul>
+<p>Homebrew 将会把老版本的包缓存下来，以便当你想回滚至旧版本时使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew upgrade &lt;package_name&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>清理</li>
+</ul>
+<p>清理旧版本的包缓存时，可以运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cleanup</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
